@@ -1,0 +1,81 @@
+/* TAG CSS */
+li a {
+  color: green
+}
+
+body {
+  color: white;
+  background: powderblue url("../images/cat47.jpg") ;
+  background-size: cover;
+  font-family: "Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3","メイリオ";
+}
+
+ul {
+  list-style: none;
+  /*display: inline;*/
+}
+
+li {
+  width: 100px;
+  font-family: "Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3","メイリオ";
+}
+
+ul li {
+  padding:-15px;
+}
+
+a {
+  color: white;
+  text-align: center;
+}
+/* CLASS CSS */
+/* header */
+.container {
+  width: 100%;
+  float: left;
+}
+
+.logo {
+  color:      white;
+  font-size:  24px;
+  padding:    20px;
+  float:      left;
+  text-decoration: none;
+  font-family: "Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3","メイリオ";
+}
+
+.header {
+  padding:    20px;
+  float:      right;
+}
+
+/* body */
+/* home */
+.title  {
+  padding:        40px;
+  padding-top:    250px;
+  text-align:     center;
+  letter-spacing: 4px;
+  font-family: "Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3","メイリオ";
+}
+
+.subtitle {
+  text-align: center;
+  font-family: "Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3","メイリオ";
+}
+
+.start_now {
+  padding:  40px;
+  text-align: center;
+  font-family: "Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3","メイリオ";
+}
+
+/* about */
+.info {
+  padding: 40px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+.wf-nicomoji { font-family: "Nico Moji"; }

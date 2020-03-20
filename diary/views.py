@@ -3,8 +3,10 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 
 
-def index(request):
+def home(request):
   #template = loader.get_template('diary/index.html')
-  return render(request, 'diary/index.html')
+  return render(request, 'diary/home.html')
 
-# Create your views here.
+def about(request):
+  return render(request, 'diary/about.html')
+
