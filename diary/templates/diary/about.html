@@ -1,21 +1,7 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'diary/css/style.css' %}">
 
-<head>
-  <div class="container">
-  <a href="/" class="logo">DiaLog</a>
-    <nav>
-      <ul class="header">
-        <a href="about">About</a>
-        <li>日記</li>
-        <li>物語</li>
-        <li>生活</li>
-        <li>友達</li>
-        <li>Contact</li>
-      </ul>
-    </nav>
-  </div>
-</head>
+{% include "diary/header.html" %}
 
 <body>
   <h1 class="title">DiaLogとは</h1>
@@ -28,7 +14,7 @@
   </p>
   <p class = "info">
     まずは自分だけの日記を書いてみてください。<br>　
-    <a href="/">=>日記を書く</a>
+    <a href="/">=>日記をひらく</a>
   </p>
 </body>
 

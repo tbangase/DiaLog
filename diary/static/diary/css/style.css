@@ -26,6 +26,7 @@ ul li {
 
 a {
   color: white;
+  padding: 10px;
   text-align: center;
 }
 /* CLASS CSS */
@@ -49,6 +50,11 @@ a {
   float:      right;
 }
 
+.header a {
+  float:  right;
+  text-decoration:  none;
+}
+
 /* body */
 /* home */
 .title  {
@@ -70,12 +76,15 @@ a {
   font-family: "Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3","メイリオ";
 }
 
+
 /* about */
 .info {
   padding: 40px;
   text-align: center;
-  text-decoration: none;
 }
 
+.info a {
+  text-decoration: none;
+}
 
 .wf-nicomoji { font-family: "Nico Moji"; }

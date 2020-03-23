@@ -10,3 +10,15 @@ def home(request):
 def about(request):
   return render(request, 'diary/about.html')
 
+def writing(request):
+  return render(request, 'diary/writing.html')
+
+def index(request):
+  return render(request, 'diary/index.html')
+
+def contact(request):
+  return render(request, 'diary/contact.html')
+
+
+
+
