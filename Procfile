@@ -1,1 +1,1 @@
-web: gunicorn apl_name:DiaLog --log-file -
+web: gunicorn app:DiaLog --log-file -
