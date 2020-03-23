@@ -100,7 +100,7 @@ WSGI_APPLICATION = 'DiaLog.wsgi.application'
 DATABASES = {
   'default' : {
     'ENGINE': 'django.db.backends.sqlite3',
-    'NAME': 'DiaLog'
+    'NAME': 'DiaLog.sqlite3'
   }
 }
 
