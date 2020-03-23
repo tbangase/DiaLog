@@ -1,1 +1,1 @@
-web: gunicorn DiaLog:app --log-file -
+web: gunicorn DiaLog:wsgi --log-file -
