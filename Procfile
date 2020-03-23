@@ -1,1 +1,1 @@
-web: gunicorn diarylog.wsgi:application -b 0.0.0.0:$PORT
+web: gunicorn diarylog.DiaLog.wsgi --log-file -
