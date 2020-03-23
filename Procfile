@@ -1,1 +1,1 @@
-web: gunicorn diarylog.wsgi --log-file -
+web: gunicorn apl_name:DiaLog --log-file -
