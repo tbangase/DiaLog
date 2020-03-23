@@ -73,16 +73,35 @@ WSGI_APPLICATION = 'DiaLog.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+## For mysql
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'DiaLog',
+#         'USER': 'toshiki',
+#         'PASSWORD': 'panichi',
+#         'HOST': '',
+#         'PORT': '',
+#     }
+# }
+## For Postgresql
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'DiaLog',
+#         'USER': 'toshiki',
+#         'PASSWORD': 'panichi',
+#         'HOST': '127.0.0.1',
+#         'PORT': '',
+#     }
+# }
+
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'DiaLog',
-        'USER': 'toshiki',
-        'PASSWORD': 'panichi',
-        'HOST': '',
-        'PORT': '',
-    }
+  'default' : {
+    'ENGINE': 'django.db.backends.sqlite3',
+    'NAME': 'DiaLog'
+  }
 }
 
 
