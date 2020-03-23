@@ -1,1 +1,1 @@
-web: python ./DiaLog/manage.py runserver
+web: python manage.py runserver
