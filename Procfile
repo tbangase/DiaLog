@@ -1,1 +1,1 @@
-web: gunicorn DiaLog:wsgi --log-file -
+web: python ./DiaLog/manage.py runserver
