@@ -45,11 +45,11 @@ scipy==1.4.1
 seaborn==0.10.0
 six==1.14.0
 sqlparse==0.3.0
-tensorboard==2.1.1
-tensorflow==2.1.0
-tensorflow-estimator==2.1.0
-tensorflow-hub==0.7.0
-tensorflow-metadata==0.21.1
+# tensorboard==2.1.1
+# tensorflow==2.1.0
+# tensorflow-estimator==2.1.0
+# tensorflow-hub==0.7.0
+# tensorflow-metadata==0.21.1
 termcolor==1.1.0
 tfds-nightly==2.1.0.dev202003120105
 tqdm==4.43.0
