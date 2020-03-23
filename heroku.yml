@@ -1,3 +1,3 @@
 build:
   docker:
-    web: gunicorn DiaLog.wsgi --log-file -
+    web: Dockerfile
