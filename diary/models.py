@@ -20,5 +20,5 @@ class Diary(models.Model):
   content     = models.CharField(max_length= 2000)
 
   def __str__(self):
-    return self.content
+    return self.title
 

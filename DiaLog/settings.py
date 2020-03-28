@@ -25,7 +25,8 @@ SECRET_KEY = ')!75!!se_^rxobl5!b$ac6*c^da2lagsj^*3v#imuuazu#o-c!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['diarylog.herokuapp.com']
+ALLOWED_HOSTS = ['diarylog.herokuapp.com',
+                 '127.0.0.1']
 
 
 # Application definition

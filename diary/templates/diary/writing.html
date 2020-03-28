@@ -1,5 +1,7 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'diary/css/style.css' %}">
+<!DOCTYPE html>
+<html>
 
 {% include "diary/header.html" %}
 
@@ -8,4 +10,13 @@
     ここで日記を投稿します。<br>
     ゆくゆくはサムネイルも投稿できるようにしたいですね。
   </p>
+
+  <form method="POST" novalidate>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">記録する</button>
+  </form>
+  <p>{{ message }}</p>
 </body>
+
+</html>

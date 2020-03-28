@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseRedirect
-from django.template import loader
+from django.http import HttpResponseRedirect
 
+from .models import User, Diary
+from .forms import DiaryForm
 
 def home(request):
   #template = loader.get_template('diary/index.html')
@@ -11,13 +12,35 @@ def about(request):
   return render(request, 'diary/about.html')
 
 def writing(request):
-  return render(request, 'diary/writing.html')
+  params = {'message':'', 'form': None}
+  if request.method == 'POST':
+    form = DiaryForm(request.POST)
+    if form.is_valid():
+      form.save()
+      return redirect('/')
+    else:
+      params['message'] = 'もう一度入力してください'
+      params['form'] = form
+  else:
+    params['form'] = DiaryForm()
+  return render(request, 'diary/writing.html', params)
 
 def index(request):
-  return render(request, 'diary/index.html')
+  latest_diary_list = Diary.objects.order_by('-created_at')[:5]
+  context = {
+    'latest_diary_list': latest_diary_list,
+  }
+  return render(request,'diary/index.html', context)
 
-def contact(request):
-  return render(request, 'diary/contact.html')
+def detail(request):
+
+  return render(request, 'diary/detail.html')
+
+def signup(request):
+  return render(request, 'diary/signup.html')
+
+#def contact(request):
+#  return render(request, 'diary/contact.html')
 
 
 

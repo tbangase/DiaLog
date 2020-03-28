@@ -1,3 +1,8 @@
+/* variables */
+$skinny : #DDA98F
+$dark-brown : #684E34
+
+
 /* TAG CSS */
 li a {
   color: green
@@ -5,7 +10,7 @@ li a {
 
 body {
   color: white;
-  background: powderblue url("../images/cat47.jpg") ;
+  background: white url("../images/cat47.jpg");
   background-size: cover;
   font-family: "Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3","メイリオ";
 }
@@ -16,7 +21,7 @@ ul {
 }
 
 li {
-  width: 100px;
+  /*width: 100px; */
   font-family: "Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3","メイリオ";
 }
 
@@ -88,3 +93,23 @@ a {
 }
 
 .wf-nicomoji { font-family: "Nico Moji"; }
+
+/* index */
+
+ul .diary_list {
+}
+
+.diary_block {
+  display: block;
+  padding: 15px 0px;
+}
+
+.indextitle {
+  padding: 5px 0px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+li .indexcontent {
+  
+}
