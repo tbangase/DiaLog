@@ -11,7 +11,7 @@ class DiaryForm(forms.ModelForm):
     )
     content = forms.CharField(
       label="content", max_length=2000,
-      required=True, widget = forms.Textarea())
+      required=True)
     #fields = ('title', 'content')
     labels = {
       'title': 'タイトル',
@@ -20,4 +20,8 @@ class DiaryForm(forms.ModelForm):
     help.texts = {
       'title': '日記のまとめを一行で表現してください',
       'content': 'こちらに日記をお書きください'
+    }
+
+    widgets = {
+      'content': forms.Textarea(attrs={'rows':6,'cols':15}),
     }

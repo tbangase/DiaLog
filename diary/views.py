@@ -17,7 +17,9 @@ def writing(request):
   if request.method == 'POST':
     form = DiaryForm(request.POST)
     if form.is_valid():
-      form.save()
+      diary = form.save(commit = False)
+      diary.created_at = timezone.now()
+      diary.save()
       return redirect('/')
     else:
       params['message'] = 'もう一度入力してください'
