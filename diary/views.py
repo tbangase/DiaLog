@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
+from django.utils import timezone
 
 from .models import User, Diary
 from .forms import DiaryForm
