@@ -1,10 +1,9 @@
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'diary/css/style.css' %}">
+{% extends "diary/base.html" %}
 
-{% include "diary/header.html" %}
+{% block content %}
 
-<body>
-  <p class="info">
-    ここでContact先（メールアドレス等）を表示します。<br>
-  </p>
-</body>
+<p class="info">
+  ここでContact先（メールアドレス等）を表示します。<br>
+</p>
+
+{% endblock %}

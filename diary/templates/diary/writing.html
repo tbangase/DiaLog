@@ -1,22 +1,40 @@
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'diary/css/style.css' %}">
-<!DOCTYPE html>
-<html>
+{% extends "diary/base.html" %}
+{% load widget_tweaks %}
 
-{% include "diary/header.html" %}
+{% block content %}
 
-<body>
-  <p class="info">
-    ここで日記を投稿します。<br>
-    ゆくゆくはサムネイルも投稿できるようにしたいですね。
-  </p>
+<p class="info">
+  ここで日記を投稿します。<br>
+  ゆくゆくはサムネイルも投稿できるようにしたいですね。
+</p>
 
-  <form method="POST" novalidate>
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">記録する</button>
-  </form>
-  <p>{{ message }}</p>
-</body>
+<form method="POST">
+  {% csrf_token %}
 
-</html>
+  <div class="form-group row">
+    <label for="{{ form.title.id_for_label }}" class="col-sm-3 col-form-label">タイトル</label>
+    <div>
+      {{ form.title|add_class:'form-control' }}
+      {% for error in form.title.errors %}
+        <span class="help-block">{{ error }}</span>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="{{ form.title.id_for_label }}" class="col-sm-3 col-form-label">本文</label>
+    <div>
+      {{ form.content|add_class:'form-control' }}
+      {% for error in form.content.errors %}
+        <span class="help-block">{{ error }}</span>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm">
+      <button type="submit" class="btn btn-info btn-block">記録する</button>
+    </div>
+  </div>
+</form>
+<p>{{ message }}</p>
+
+{% endblock %}

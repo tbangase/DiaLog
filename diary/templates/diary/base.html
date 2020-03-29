@@ -1,3 +1,7 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'diary/css/style.css' %}">
+<!DOCTYPE html>
+<html>
 <head>
   <div class="container">
   <a href="/" class="logo">DiaLog</a>
@@ -11,3 +15,12 @@
     </nav>
   </div>
 </head>
+
+<body>
+  {% block content %}
+  {% endblock %}
+</body>
+
+<footer>
+</footer>
+</html>

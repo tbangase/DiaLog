@@ -1,23 +1,22 @@
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'diary/css/style.css' %}">
+{% extends "diary/base.html" %}
 
-{% include "diary/header.html" %}
+{% block content %}
 
-<body>
-  <p class="info">
-    人生の軌跡をここに表示します。<br>
-    多くの日記を書いて自分だけの人生の足跡を作りましょう。
-  </p>
-  {% if latest_diary_list %}
-    <ul class="diary_list">
-    {% for diary in latest_diary_list %}
-      <div class="diary_block">
-        <li class="indextitle">{{ diary.title }}</li>
-        <li class="indexcontent">{{ diary.content|truncatechars:100 }}</li>
-      </div>
-    {% endfor %}
-    </ul>
-  {% else %}
-    <p>No diaries yet.</p>
-  {% endif %}
-</body>
+<p class="info">
+  人生の軌跡をここに表示します。<br>
+  多くの日記を書いて自分だけの人生の足跡を作りましょう。
+</p>
+{% if latest_diary_list %}
+  <ul class="diary_list">
+  {% for diary in latest_diary_list %}
+    <div class="diary_block">
+      <li class="indextitle">{{ diary.title }}</li>
+      <li class="indexcontent">{{ diary.content|truncatechars:100 }}</li>
+    </div>
+  {% endfor %}
+  </ul>
+{% else %}
+  <p>No diaries yet.</p>
+{% endif %}
+
+{% endblock %}

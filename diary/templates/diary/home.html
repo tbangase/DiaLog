@@ -1,17 +1,13 @@
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'diary/css/style.css' %}">
+{% extends "diary/base.html" %}
 
-{% include "diary/header.html" %}
+{% block content %}
 
-<body>
-  <h1 class="title">DiaLog</h1>
+<h1 class="title">DiaLog</h1>
 
-  <h3 class="subtitle">あなたの記録がすべてここに。</h3>
-  <div class="start_now">
-    <a href="writing">日記をひらく</a>
-  </div>
+<h3 class="subtitle">あなたの記録がすべてここに。</h3>
+<div class="start_now">
+  <a href="writing">日記をひらく</a>
+</div>
 
-</body>
-
-
+{% endblock %}
 

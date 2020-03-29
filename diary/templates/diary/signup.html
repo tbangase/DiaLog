@@ -1,11 +1,10 @@
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'diary/css/style.css' %}">
+{% extends "diary/base.html" %}
 
-{% include "diary/header.html" %}
+{% block content %}
 
-<body>
-  <p class="info">
-    ここはSign Upページです。<br>
-    Sign up, しましょう。
-  </p>
-</body>
+<p class="info">
+  ここはSign Upページです。<br>
+  Sign up, しましょう。
+</p>
+
+{% endblock %}

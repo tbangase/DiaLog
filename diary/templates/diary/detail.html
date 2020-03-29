@@ -1,11 +1,10 @@
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'diary/css/style.css' %}">
+{% extends "diary/base.html" %}
 
-{% include "diary/header.html" %}
+{% block content %}
 
-<body>
-  <p class="info">
-    ここで日記の詳細を表示します<br>
-    日記情報から得られた情報などなど盛り込めると楽しいね。
-  </p>
-</body>
+<p class="info">
+  ここで日記の詳細を表示します<br>
+  日記情報から得られた情報などなど盛り込めると楽しいね。
+</p>
+
+{% endblock %}
