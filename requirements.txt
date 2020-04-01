@@ -2,6 +2,7 @@ absl-py==0.9.0
 asgiref==3.2.3
 astor==0.7.1
 attrs==19.3.0
+beautifulsoup4==4.8.2
 cachetools==4.0.0
 certifi==2019.11.28
 chardet==3.0.4
@@ -9,6 +10,7 @@ cycler==0.10.0
 dill==0.3.1.1
 dj-database-url==0.5.0
 Django==3.0.4
+django-bootstrap4==1.1.1
 django-widget-tweaks==1.4.8
 future==0.18.2
 gast==0.2.2
@@ -45,12 +47,13 @@ rsa==4.0
 scipy==1.4.1
 seaborn==0.10.0
 six==1.14.0
+soupsieve==2.0
 sqlparse==0.3.0
 tensorboard==2.1.1
-# tensorflow==2.1.0
-# tensorflow-estimator==2.1.0
-# tensorflow-hub==0.7.0
-# tensorflow-metadata==0.21.1
+#tensorflow==2.1.0
+#tensorflow-estimator==2.1.0
+#tensorflow-hub==0.7.0
+#tensorflow-metadata==0.21.1
 termcolor==1.1.0
 tfds-nightly==2.1.0.dev202003120105
 tqdm==4.43.0
