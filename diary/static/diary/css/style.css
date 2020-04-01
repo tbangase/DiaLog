@@ -100,16 +100,22 @@ ul .diary_list {
 }
 
 .diary_block {
+  width: 200px;
+  height: 267px;
+  background-color: #777;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #ccc;
   display: block;
-  padding: 15px 0px;
+  float: left;
+  margin: 15px 5px;
 }
 
 .indextitle {
-  padding: 5px 0px;
-  font-size: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
   font-weight: bold;
 }
 
-li .indexcontent {
-  
+.indexcontent {
+ padding: 0 10px; 
 }
