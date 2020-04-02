@@ -19,6 +19,7 @@ def writing(request):
     if form.is_valid():
       diary = form.save(commit = False)
       diary.created_at = timezone.now()
+      diary.user = User.objects.get(id=1)
       diary.save()
       return redirect('/')
     else:
