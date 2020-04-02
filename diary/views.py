@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from django.utils import timezone
 
@@ -21,7 +21,7 @@ def writing(request):
       diary.created_at = timezone.now()
       diary.user = User.objects.get(id=1)
       diary.save()
-      return redirect('/')
+      return redirect('/index')
     else:
       params['message'] = 'もう一度入力してください'
       params['form'] = form
