@@ -111,11 +111,17 @@ ul .diary_list {
 }
 
 .indextitle {
+  height:  69px;
   padding: 10px 20px;
   font-size: 18px;
   font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .indexcontent {
- padding: 0 10px; 
+  height: 149px;
+  padding: 0 15px; 
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

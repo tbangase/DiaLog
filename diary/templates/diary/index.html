@@ -11,7 +11,7 @@
   {% for diary in latest_diary_list %}
     <div class="diary_block">
       <li class="indextitle">{{ diary.title }}</li>
-      <li class="indexcontent">{{ diary.content|truncatechars:50 }}</li>
+      <li class="indexcontent">{{ diary.content|truncatechars:150 }}</li>
     </div>
   {% endfor %}
   </ul>
