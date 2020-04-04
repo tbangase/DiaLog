@@ -4,34 +4,34 @@
 {% block content %}
 
 <p class="info">
-  ここで日記を投稿します。<br>
-  ゆくゆくはサムネイルも投稿できるようにしたいですね。
+  ここはログインフォームです。<br>
+  DjangoでのUserモデルまだよくわかってないですが、頑張ります。
 </p>
 
 <form method="POST">
   {% csrf_token %}
 
   <div class="form-group justify-content-center row">
-    <label for="{{ form.title.id_for_label }}" class="col-sm-3 col-form-label row">タイトル</label>
+    <label for="{{ form.email.id_for_label }}" class="col-sm-3 col-form-label row">Email</label>
     <div class="col-sm-8 ">
-      {{ form.title|add_class:'form-control' }}
-      {% for error in form.title.errors %}
+      {{ form.email|add_class:'form-control' }}
+      {% for error in form.email.errors %}
         <span class="help-block">{{ error }}</span>
       {% endfor %}
     </div>
   </div>
   <div class="form-group justify-content-center row">
-    <label for="{{ form.title.id_for_label }}" class="col-sm-3 col-form-label row">本文</label>
+    <label for="{{ form.password.id_for_label }}" class="col-sm-3 col-form-label row">Password</label>
     <div class="col-sm-8">
-      {{ form.content|add_class:'form-control' }}
-      {% for error in form.content.errors %}
+      {{ form.password|add_class:'form-control' }}
+      {% for error in form.password.errors %}
         <span class="help-block">{{ error }}</span>
       {% endfor %}
     </div>
   </div>
   <div class="form-group row justify-content-center">
     <div class="col-sm w-auto">
-      <button type="submit" class="btn btn-info btn-block">記録する！</button>
+      <button type="submit" class="btn btn-info btn-block">ログインする</button>
     </div>
   </div>
 </form>

@@ -10,7 +10,8 @@ li a {
 
 body {
   color: white;
-  background: white url("../images/cat47.jpg");
+  /*background: white url("../images/cat47.jpg");*/
+  background-color: #222;
   background-size: cover;
   font-family: "Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3","メイリオ";
 }

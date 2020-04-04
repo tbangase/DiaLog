@@ -4,10 +4,11 @@ from django.test import TestCase
 from django.urls import reverse
 
 from .models import User, Diary
+from .forms import DiaryForm
 # Create your tests here.
 
 
-class DiaryViewTests(TestCase):
+class DiaryTemplateTests(TestCase):
   def setup(self):
     user = User.objects.create(
       name = "example", created_at=timezone.now(),
@@ -52,15 +53,6 @@ class DiaryViewTests(TestCase):
     self.assertTemplateUsed(response, 'diary/base.html')
     self.assertTemplateUsed(response, 'diary/detail.html')
 
-  def test_writing_page_presence_true(self):
-    """
-    writing page should exists.
-    """
-    response = self.client.get(reverse('writing'))
-    self.assertEqual(response.status_code, 200)
-    self.assertTemplateUsed(response, 'diary/base.html')
-    self.assertTemplateUsed(response, 'diary/writing.html')
-
   def test_signup_page_presence_true(self):
     """
     signup page should exists.
@@ -69,5 +61,37 @@ class DiaryViewTests(TestCase):
     self.assertEqual(response.status_code, 200)
     self.assertTemplateUsed(response, 'diary/base.html')
     self.assertTemplateUsed(response, 'diary/signup.html')
+
+
+class DiaryWritingTest(TestCase):
+  def test_correct_diary_should_submit(self):
+    """
+    Correct diary should be written.
+    """
+    response = self.client.get(reverse('writing'))
+    self.assertEqual(response.status_code, 200)
+    self.assertTemplateUsed(response, 'diary/base.html')
+    self.assertTemplateUsed(response, 'diary/writing.html')
+    data = {
+      "title":"Example title",
+      "content":'Example content\n Example content'
+    }
+    form = DiaryForm(data)
+    self.assertTrue(form.is_valid())
+
+  def test_wrong_diary_should_not_submit(self):
+    response = self.client.get(reverse('writing'))
+    data = {
+      "title":"",
+      "content":'Example content\n Example content'
+    }
+    form = DiaryForm(data)
+    self.assertFalse(form.is_valid())
+    data = {
+      "title":"Example Title",
+      "content":''
+    }
+    form = DiaryForm(data)
+    self.assertFalse(form.is_valid())
 
 

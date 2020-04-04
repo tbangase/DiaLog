@@ -43,6 +43,9 @@ def detail(request):
 def signup(request):
   return render(request, 'diary/signup.html')
 
+def login(request):
+  return render(request, 'diary/login.html')
+
 #def contact(request):
 #  return render(request, 'diary/contact.html')
 
