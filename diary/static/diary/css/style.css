@@ -103,12 +103,12 @@ ul .diary_list {
 .diary_block {
   width: 200px;
   height: 267px;
-  background-color: #777;
+  background-color: #555;
   border-radius: 5px;
-  box-shadow: 0 2px 5px #ccc;
+  box-shadow: 5px 8px 5px #888;
   display: block;
   float: left;
-  margin: 15px 5px;
+  margin: 15px 10px;
 }
 
 .indextitle {
@@ -125,4 +125,9 @@ ul .diary_list {
   padding: 0 15px; 
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.start_diary {
+  text-align: center;
+  margin-top: 100px;
 }

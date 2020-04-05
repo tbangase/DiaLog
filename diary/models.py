@@ -34,7 +34,7 @@ class CustomUserManager(UserManager):
 
 class User(AbstractBaseUser, PermissionsMixin):
   email       = models.EmailField('email address', unique=True)
-  name        = models.CharField(max_length=100)
+  username    = models.CharField(max_length=100)
 
   created_at  = models.DateTimeField('user created')
   updated_at  = models.DateTimeField('user updated')

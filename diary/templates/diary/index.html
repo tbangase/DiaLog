@@ -3,7 +3,7 @@
 {% block content %}
 
 <p class="info">
-  人生の軌跡をここに表示します。<br>
+  あなたの人生の足跡はここにあります。<br>
   多くの日記を書いて自分だけの人生の足跡を作りましょう。
 </p>
 {% if latest_diary_list %}
@@ -16,7 +16,17 @@
   {% endfor %}
   </ul>
 {% else %}
-  <p>No diaries yet.</p>
+  <ul class="diary_list">
+    <a href="/writing">
+      <div class="diary_block">
+        <div class="start_diary">
+          No diaries yet.<br>
+          Start your DiaLog<br>
+          from here.
+        </div>
+      </div>
+    </a>
+  </ul>
 {% endif %}
 
 {% endblock %}
