@@ -5,7 +5,7 @@ from django.views.generic.base import View
 from django.utils import timezone
 
 from .models import User, Diary
-from .forms import DiaryForm, UserSignupForm, LoginForm
+from .forms import DiaryForm, UserSignupForm, UserLoginForm
 
 def home(request):
   #template = loader.get_template('diary/index.html')
@@ -74,7 +74,7 @@ signup = SignupAccount.as_view()
 class AccountLogin(View):
   def post(self, request, *arg, **kwargs):
     params = {'message':'', 'form': None}
-    form = LoginForm(data=request.POST)
+    form = UserLoginForm(data=request.POST)
     if form.is_valid():
       username = form.cleaned_data.get('email')
       user = User.objects.get(username=username)
@@ -87,7 +87,7 @@ class AccountLogin(View):
     return render(request, 'diary/login.html', params)
 
   def get(self, request, *args, **kwargs):
-    form = LoginForm()
+    form = UserLoginForm()
     return render(request, 'diary/login.html', {'form': form,})
 
 login = AccountLogin.as_view()

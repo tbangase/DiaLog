@@ -12,7 +12,7 @@
   {% csrf_token %}
 
   <div class="form-group justify-content-center row">
-    <label for="{{ form.email.id_for_label }}" class="col-sm-3 col-form-label row">Email</label>
+    <label for="{{ form.email.id_for_label }}" class="col-sm-8 col-form-label row">Email</label>
     <div class="col-sm-8 ">
       {{ form.username|add_class:'form-control' }}
       {% for error in form.username.errors %}
@@ -21,7 +21,7 @@
     </div>
   </div>
   <div class="form-group justify-content-center row">
-    <label for="{{ form.password.id_for_label }}" class="col-sm-3 col-form-label row">Password</label>
+    <label for="{{ form.password.id_for_label }}" class="col-sm-8 col-form-label row">Password</label>
     <div class="col-sm-8">
       {{ form.password|add_class:'form-control' }}
       {% for error in form.password.errors %}

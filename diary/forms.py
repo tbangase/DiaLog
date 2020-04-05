@@ -15,7 +15,7 @@ class UserSignupForm(UserCreationForm):
     model = User
     fields = ("email", "password1", "password2",)
 
-class LoginForm(AuthenticationForm):
+class UserLoginForm(AuthenticationForm):
   def __init__(self, *args, **kwargs):
     super().__init__(*args, **kwargs)
     self.fields['username'].widget.attrs['class'] = 'form-controll'

@@ -4,14 +4,16 @@ from django.test import TestCase
 from django.urls import reverse
 
 from .models import User, Diary
-from .forms import DiaryForm
+from .forms import DiaryForm, UserSignupForm, UserLoginForm
 # Create your tests here.
 
-
 class DiaryTemplateTests(TestCase):
-  def setup(self):
+  def set_up(self):
     user = User.objects.create(
-      name = "example", created_at=timezone.now(),
+      name = "example",
+      email = "example@email.com",
+      password = "password",
+      created_at=timezone.now(),
       updated_at=timezone.now()
     )
     user.save()
@@ -94,4 +96,38 @@ class DiaryWritingTest(TestCase):
     form = DiaryForm(data)
     self.assertFalse(form.is_valid())
 
+class DiarySignupTest(TestCase):
+  def test_signup_with_valid_user(self):
+    response = self.client.get(reverse('signup'))
+    data = {
+      "email": "exampletwo@email.com",
+      "password1": "password",
+      "password2": "password"
+    }
+    form = UserSignupForm(data)
+    print(form.email.errors)
+    print('\n')
+    self.assertTrue(form.is_valid())
+
+class DiaryLoginTest(TestCase):
+  def set_up(self):
+    user = User.objects.create(
+      name = "example",
+      email = "example@email.com",
+      password = "password",
+      created_at=timezone.now(),
+      updated_at=timezone.now()
+    )
+    user.save()
+  def test_login_with_valid_user(self):
+    """
+    Correct user should log in 
+    """
+    response = self.client.get(reverse('login'))
+    data = {
+      "username": "example@email.com",
+      "password": "password"
+    }
+    form = UserLoginForm(data)
+    self.assertTrue(form.is_valid())
 
