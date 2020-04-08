@@ -12,7 +12,7 @@ class DiaryTemplateTests(TestCase):
     user = User.objects.create(
       name = "example",
       email = "example@email.com",
-      password = "password",
+      password = "examples",
       created_at=timezone.now(),
       updated_at=timezone.now()
     )
@@ -100,13 +100,11 @@ class DiarySignupTest(TestCase):
   def test_signup_with_valid_user(self):
     response = self.client.get(reverse('signup'))
     data = {
-      "email": "exampletwo@email.com",
-      "password1": "password",
-      "password2": "password"
+      "email": "example_two@email.com",
+      "password1": "examples",
+      "password2": "examples",
     }
     form = UserSignupForm(data)
-    print(form.email.errors)
-    print('\n')
     self.assertTrue(form.is_valid())
 
 class DiaryLoginTest(TestCase):
@@ -114,9 +112,9 @@ class DiaryLoginTest(TestCase):
     user = User.objects.create(
       name = "example",
       email = "example@email.com",
-      password = "password",
+      password = "examples",
       created_at=timezone.now(),
-      updated_at=timezone.now()
+      updated_at=timezone.now(),
     )
     user.save()
   def test_login_with_valid_user(self):
@@ -126,7 +124,7 @@ class DiaryLoginTest(TestCase):
     response = self.client.get(reverse('login'))
     data = {
       "username": "example@email.com",
-      "password": "password"
+      "password": "examples"
     }
     form = UserLoginForm(data)
     self.assertTrue(form.is_valid())

@@ -2,22 +2,34 @@
 {% bootstrap_javascript jquery='full' %}
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'diary/css/style.css' %}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 
 <!DOCTYPE html>
 <html>
 <head>
-  <div class="w-100 nav">
+  <nav class="navbar navbar-expand-sm">
   <a href="/" class="logo"><i>DiaLog</i></a>
-    <nav class="ml-auto">
-      <ul class="header row">
-        <a href="about">About</a><br>
-        <a href="writing">日記投稿</a><br>
-        <a href="index">日記一覧</a><br>
-        <a href="signup">Sign Up</a><br>
-        <a href="login">Log in</a><br>
+    <div class="ml-auto">
+      <button class="navbar-toggler" type="button"
+        data-toggle="collapse"
+        data-target="#navmenu1"
+        aria-controls="navmenu1"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fa fa-bars" style="color:white"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu1">
+      <!--<ul class="header row"> -->
+        <div class="navbar-nav">
+          <a href="about">About</a><br>
+          <a href="writing">日記投稿</a><br>
+          <a href="index">日記一覧</a><br>
+          <a href="signup">Sign Up</a><br>
+          <a href="login">Log in</a><br>
+        </div>
       </ul>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </head>
 
 <body>
@@ -27,4 +39,30 @@
 
 <footer>
 </footer>
+
+<!-- bottom navigation -->
+
+<ul class="bottom-menu">
+  <li>
+    <!--  項目１．ほーむ -->
+    <a href='/'>
+      <i class="fa fa-home" aria-hidden="true" style="font-size:15px;"></i><br><span class="mini-text">ホーム</span>
+    </a>
+  </li>
+
+  <li class="menu-width-max">
+    <!-- 項目２．日記 -->
+    <a href='/writing'>
+      <i class="fa fa-pencil-square-o" aria-hidden="true" style="font-size:15px"></i><br>
+      <span class="mini-text">日記</span>
+    </a>
+    <ul class="menu-second-level">
+      <li><a href="/writing">日記投稿</a></li>
+      <li><a href="/index">日記一覧</a></li>
+    </ul>
+  </li>
+</ul>
+
 </html>
+
+
