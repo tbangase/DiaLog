@@ -7,38 +7,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <nav class="navbar navbar-expand-sm">
-  <a href="/" class="logo"><i>DiaLog</i></a>
-    <div class="ml-auto">
-      <button class="navbar-toggler" type="button"
-        data-toggle="collapse"
-        data-target="#navmenu1"
-        aria-controls="navmenu1"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
-        <i class="fa fa-bars" style="color:white"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navmenu1">
-      <!--<ul class="header row"> -->
-        <div class="navbar-nav">
-          <a href="about">About</a><br>
-          <a href="writing">日記投稿</a><br>
-          <a href="index">日記一覧</a><br>
-          <a href="signup">Sign Up</a><br>
-          <a href="login">Log in</a><br>
-        </div>
-      </ul>
-    </div>
-  </nav>
+  <meta name="viewport" content="width=device-width">
 </head>
 
 <body>
-  {% block content %}
-  {% endblock %}
+  <div class="wrap">
+    <header>
+      <nav class="navbar navbar-expand-sm header">
+      <a href="/" class="logo"><i>DiaLog</i></a>
+        <div class="ml-auto">
+          <button class="navbar-toggler" type="button"
+            data-toggle="collapse"
+            data-target="#navmenu1"
+            aria-controls="navmenu1"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fa fa-bars" style="color:white"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navmenu1">
+          <!--<ul class="header row"> -->
+            <div class="navbar-nav">
+              <a href="about">About</a><br>
+              <a href="writing">日記投稿</a><br>
+              <a href="index">日記一覧</a><br>
+              <a href="signup">Sign Up</a><br>
+              <a href="login">Log in</a><br>
+            </div>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+    </footer>
+
+  </div>
+
 </body>
 
-<footer>
-</footer>
 
 <!-- bottom navigation -->
 
@@ -52,7 +61,7 @@
 
   <li class="menu-width-max">
     <!-- 項目２．日記 -->
-    <a href='/writing'>
+    <a>
       <i class="fa fa-pencil-square-o" aria-hidden="true" style="font-size:15px"></i><br>
       <span class="mini-text">日記</span>
     </a>
