@@ -57,7 +57,7 @@ tensorboard==2.1.1
 termcolor==1.1.0
 tfds-nightly==2.1.0.dev202003120105
 tqdm==4.43.0
-urllib3==1.25.8
+urllib3==1.26.5
 Werkzeug==1.0.0
 whitenoise==5.0.1
 wrapt==1.12.1
